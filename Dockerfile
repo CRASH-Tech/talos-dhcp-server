@@ -8,9 +8,6 @@ RUN apk add bash
 
 COPY start.sh /start.sh
 RUN chmod a+x /start.sh
-COPY talos/ /srv/
-COPY lighttpd.conf /etc/lighttpd/lighttpd.conf
-COPY dhcpd.conf /etc/dhcp/dhcpd.conf
-RUN touch /var/lib/dhcp/dhcpd.leases
+COPY talos/ /srv/talos/
 
 ENTRYPOINT /start.sh
