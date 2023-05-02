@@ -11,4 +11,6 @@ COPY start.sh /start.sh
 RUN chmod a+x /start.sh
 COPY talos/ /srv/talos/
 
+EXPOSE 67/udp 69/udp 80/tcp
+
 ENTRYPOINT /start.sh
