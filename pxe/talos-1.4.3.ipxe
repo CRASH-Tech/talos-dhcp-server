@@ -1,0 +1,5 @@
+#!ipxe
+
+kernel http://127.0.0.1/talos/1.4.3/vmlinuz-amd64 slab_nomerge pti=on talos.platform=metal
+initrd http://127.0.0.1/talos/1.4.3/initramfs-amd64.xz
+boot
